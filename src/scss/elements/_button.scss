@@ -1,0 +1,18 @@
+
+button.app-btn {
+  cursor: pointer;
+
+  &.is-icon-btn {
+    border: 0;
+    padding: 0;
+    background: transparent;
+
+    &:hover {
+      > .icon {
+        > i {
+          filter: brightness(0.85);
+        }
+      }
+    }
+  }
+}

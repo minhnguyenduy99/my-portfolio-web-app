@@ -1,0 +1,26 @@
+
+
+.navbar {
+    height: var(--navbar-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--sidebar-width));
+    z-index: 99;
+    background: var(--background-color);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 50px;
+    display: none;
+
+    @include desktop {
+        display: block;
+        & + * {
+            margin-top: var(--navbar-height);
+        }
+        & > &-content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

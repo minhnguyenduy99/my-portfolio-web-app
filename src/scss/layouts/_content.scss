@@ -1,0 +1,25 @@
+.body-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+
+  > header {
+    margin-bottom: 50px;
+  }
+
+  > section {
+    flex-grow: 1;
+  }
+
+  @include tablet {
+    padding: 20px 40px;
+  }
+
+  @include desktop {
+    padding: 40px 60px;
+  }
+
+  @include desktop-fullhd {
+      padding: 80px 120px;
+  }
+}

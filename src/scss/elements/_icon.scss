@@ -1,0 +1,36 @@
+$iconSizes: (
+  small: 1rem,
+  medium: 1.5rem
+);
+
+@mixin iconColor($color) {
+  span.icon {
+    &.is-#{$color} {
+      > i {
+        color: var(--#{$color}-color);
+      }
+    }
+  }
+}
+
+@mixin iconSize($size) {
+  span.icon {
+    &.is-#{$size} {
+      $sizeInPx: map-get($iconSizes, $size);
+
+      > i {
+        font-size: #{$sizeInPx};
+      }
+    }
+  }
+}
+
+// color 
+@include iconColor("primary");
+@include iconColor("primary-dark");
+@include iconColor("dark");
+
+// size
+@each $type, $size in $iconSizes {
+  @include iconSize($type);
+}

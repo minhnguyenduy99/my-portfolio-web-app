@@ -1,0 +1,14 @@
+[class^="theme"] {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.theme-dark {
+    --background-color: var(--dark-color); 
+    --text-color: var(--light-color);
+}
+
+.theme-light {
+    --background-color: var(--light-color); 
+    --text-color: var(--text-color);
+}

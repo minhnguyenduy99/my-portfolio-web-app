@@ -1,0 +1,50 @@
+@mixin hasTextColor($color) {
+    .has-text-#{$color} {
+        color: var(--#{$color}-color);
+    }
+}
+
+@mixin hasBackgroundColor($color) {
+    .has-background-#{$color} {
+        background-color: var(--#{$color}-color);
+    }
+}
+
+@include hasTextColor("primary");
+@include hasTextColor("primary-dark");
+@include hasTextColor("light");
+@include hasTextColor("dark");
+
+@include hasBackgroundColor("primary");
+@include hasBackgroundColor("primary-dark");
+@include hasBackgroundColor("light");
+@include hasBackgroundColor("dark");
+
+.has-border {
+    width: fit-content;
+    position: relative;
+
+    &::after {
+        --border-width: 100%;
+        max-width: 85px;
+        content: "";
+        width: var(--border-width);
+        height: 10px;
+        position: absolute;
+        left: 0;
+        top: calc(100% - 2px);
+        background-color: var(--primary-color);
+    }
+
+    &.has-border-thin {
+        &::after {
+            height: 5px;    
+        }
+    }
+
+    &.has-border-full {
+        &::after {
+            --border-width: 100%;
+        }
+    }
+}

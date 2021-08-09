@@ -1,0 +1,27 @@
+@import "./responsive";
+
+:root {
+    --primary-color: hsl(197, 100%, 45%);
+    --primary-dark-color: hsl(205, 100%, 17%);
+    --dark-color: hsl(195, 100%, 6%);
+    --light-color: white;
+    --default-font-size: 14px;
+    --navbar-height: 100px;
+    --sidebar-width: 100%;
+    --tablet-width: 768px;
+    --desktop-width: 1366px;
+    --desktop-fullhd-width: 1920px;
+    --animate-duration: 800ms;
+
+    @include desktop {
+        --default-font-size: 16px;
+        --navbar-height: 60px;
+        --sidebar-width: 450px;
+    }
+  
+    @include desktop-fullhd {
+        --default-font-size: 18px;
+        --navbar-height: 100px;
+        --sidebar-width: 634px;
+    }
+}

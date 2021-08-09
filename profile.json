@@ -1,9 +1,10 @@
 {
   "aboutMe": "Hi, my name is Minh. I've recently finished my 4-year study program of Software Engineering at <strong>University Of Information Technology</strong>. Regardless of the current state of pandemic, I still yearn for a job opportunity to work in the IT industry. <p>Upon the fact that I'm a fresher, I'm pleased to cooperate with highly competent people and get myself updated with latest technologies and gain more working experiences.</p",
   "profile": {
-    "avatar": "https://3.bp.blogspot.com/-GPfEuBw88mw/WWShjFsiJPI/AAAAAAAABTE/XMZ105eYXK8mPaN2s9JHilxcWp1RETcewCEwYBhgL/s1600/hanekawa-sees-something-she-shouldnt-have.jpg",
+    "avatar": "https://res.cloudinary.com/dml8e1w0z/image/upload/v1628519739/Portfolio/image_qgucei.jpg",
     "fullName": "Nguyen Duy Minh",
     "introduction": "<span>Hi, I'm a newly graduated student and currently looking for a job opportunity as a <strong>Web Developer</strong></span>",
+    "cvURL": "https://res.cloudinary.com/dml8e1w0z/image/upload/v1628518591/Portfolio/official_cv_cqofnx.pdf",
     "contacts": [
       {
         "iconClass": "fab fa-github",
@@ -19,6 +20,11 @@
         "iconClass": "fas fa-envelope",
         "type": "tooltip",
         "value": "minhnguyenduy99@gmail.com"
+      },
+      {
+        "iconClass": "fas fa-mobile-alt",
+        "type": "tooltip",
+        "value": "0346146128"
       }
     ]
   },
@@ -61,11 +67,11 @@
   },
   "experiences": [
     {
-      "time": "2020-6-27",
+      "time": "27/6/2020",
       "content": "Intern at TechX for 3 months"
     },
     {
-      "time": "2021-7-22",
+      "time": "22/7/2021",
       "content": "Complete school program and ready for fulltime job"
     }
   ],

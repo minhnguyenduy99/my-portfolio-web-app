@@ -13,7 +13,7 @@
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 12px));
     opacity: 0;
     transition: opacity 0.3s;
 
@@ -21,7 +21,7 @@
       content: "";
       position: absolute;
       top: 100%;
-      left: calc(50% - 20px);
+      left: calc(50%);
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;

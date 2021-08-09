@@ -24,11 +24,21 @@
             }"
           >
             <span class="active--up" v-if="index === active" />
-            <router-link :to="nav.to">
+            <component
+              :is="nav.type"
+              :to="nav.to"
+              :href="nav.link"
+              v-bind="nav.attributes"
+            >
               <span>
                 {{ nav.name }}
               </span>
-            </router-link>
+            </component>
+            <!-- <router-link v-if="nav.type === 'router'" :to="nav.to">
+              <span>
+                {{ nav.name }}
+              </span>
+            </router-link> -->
             <span v-if="index === active" class="active--down" />
           </li>
         </ul>

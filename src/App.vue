@@ -38,9 +38,9 @@ export default {
   setup() {},
   data: () => ({
     navigators: [
-      { name: "About Me", to: "/aboutme" },
-      { name: "Skills", to: "/skills" },
-      { name: "Projects", to: "/projects" },
+      { name: "About Me", to: "/aboutme", type: "router-link" },
+      { name: "Skills", to: "/skills", type: "router-link" },
+      { name: "Projects", to: "/projects", type: "router-link" },
     ],
     active: 0,
     profileInfo: null,
@@ -52,6 +52,14 @@ export default {
   },
   created: function () {
     this.profileInfo = this.$profileService.getProfile();
+    this.navigators.push({
+      name: "My CV",
+      type: "a",
+      link: this.profileInfo.cvURL,
+      attributes: {
+        target: "blank",
+      },
+    });
   },
 };
 </script>

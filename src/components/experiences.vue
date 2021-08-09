@@ -8,7 +8,7 @@
     >
       <span class="line" />
       <div class="content">
-        <span class="is-caption">{{ toDate(experience.time) }}</span>
+        <span class="is-caption">{{ experience.time }}</span>
         <span>{{ experience.content }}</span>
       </div>
     </div>
@@ -24,14 +24,6 @@ export default {
   computed: {
     itemCount() {
       return this.experiences.length;
-    },
-  },
-  methods: {
-    /**
-     * @param {Date} date
-     */
-    toDate(date) {
-      return new Date(date).toLocaleDateString("en-GB");
     },
   },
 };

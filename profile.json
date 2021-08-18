@@ -80,6 +80,7 @@
       "title": "OOPForLearnee",
       "description": "A website for OOP learners with topic-based organized lessons and practical test quizzes, which enhances user’s experiences and comprehensiveness. <p>Website also comes up with a rich content management system allowing authorized users to create and manage pertaining items and categories.</p>",
       "projectType": "Web App",
+      "technologies": ["NestJS", "VueJS"],
       "githubLink": "https://github.com/minhnguyenduy99/OOPForLearnee",
       "productLink": "https://oop-learnee.herokuapp.com/"
     },
@@ -87,6 +88,7 @@
       "title": "Dictensionary",
       "description": "Looks up words on dictionary, saves your word with context and highlights it on every page you visit",
       "projectType": "Chrome extension",
+      "technologies": ["VueJS"],
       "githubLink": "https://github.com/minhnguyenduy99/dictensionary",
       "productLink": "#"
     }

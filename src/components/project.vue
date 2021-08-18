@@ -4,6 +4,7 @@
       <span class="icon is-medium is-primary">
         <i class="far fa-folder"></i>
       </span>
+      <p class="project__type">{{ projectType }}</p>
     </div>
     <div class="project__content">
       <p class="is-title">{{ title }}</p>
@@ -13,7 +14,14 @@
     </div>
     <div class="project__footer">
       <div>
-        <p class="is-caption">{{ projectType }}</p>
+        <div>
+          <span
+            class="technology"
+            v-for="tech in technologies"
+            :key="tech.id"
+            >{{ tech }}</span
+          >
+        </div>
         <a :href="githubLink" target="blank">
           <span class="icon is-light is-medium">
             <i class="fab fa-github"></i>
@@ -31,10 +39,16 @@ export default {
     title: String,
     description: String,
     projectType: String,
+    technologies: Array,
     githubLink: String,
     productLink: String,
   },
   setup() {},
+  computed: {
+    technologiesStr() {
+      return this.technologies.join(", ");
+    },
+  },
 };
 </script>
 
@@ -56,6 +70,22 @@ export default {
 
   &__header {
     margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__type {
+    padding: 5px 10px;
+    margin: 0;
+    margin: -5px;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__content {
@@ -73,13 +103,33 @@ export default {
 
   &__footer {
     margin-top: 24px;
-    padding-top: 24px;
-    border-top: 2px solid black;
+    padding-top: 16px;
+    border-top: 2px solid var(--dark-color);
 
     > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      span.technology {
+        display: inline-block;
+        padding: 0 8px;
+        opacity: 0.8;
+        transition: 0.15s ease;
+        color: var(--primary-color);
+        font-weight: bold;
+
+        &:not(:last-child) {
+          border-right: 1px solid var(--dark-color);
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }

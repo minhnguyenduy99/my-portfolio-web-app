@@ -6,14 +6,6 @@
           <h1 class="is-header has-border">Skills</h1>
         </header>
         <div class="skill-page-layout">
-          <div>
-            <section class="description">
-              <p v-html="description"></p>
-              <section class="experiences">
-                <experiences :experiences="experiences" />
-              </section>
-            </section>
-          </div>
           <section class="skill-groups">
             <skill-group
               v-for="group in skillGroups"
@@ -29,13 +21,11 @@
 
 <script>
 import SkillGroup from "../components/skill-group.vue";
-import Experiences from "../components/experiences.vue";
 
 export default {
   name: "Skills",
   components: {
     SkillGroup,
-    Experiences,
   },
   data: () => ({
     description: `For the last one year, I've been working on multiple Web projects varied from both frontend and backend development.

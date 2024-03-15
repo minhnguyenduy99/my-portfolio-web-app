@@ -43,7 +43,7 @@ export default {
     grid-template-columns: repeat(2, max(300px));
   }
 
-  @include desktop-fullhd {
+  @include desktop {
     grid-template-columns: repeat(3, 1fr);
   }
 }

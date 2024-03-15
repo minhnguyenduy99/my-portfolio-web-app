@@ -1,6 +1,5 @@
 <template>
   <div class="experience">
-    <header class="is-header">Experiences</header>
     <div
       class="experience__item"
       v-for="experience in experiences"
@@ -8,8 +7,24 @@
     >
       <span class="line" />
       <div class="content">
-        <span class="is-caption">{{ experience.time }}</span>
-        <span>{{ experience.content }}</span>
+        <div class="is-caption">
+          {{ experience.from }} - {{ experience.to }}
+        </div>
+        <div class="company">
+          {{ experience.company }}
+          <span v-if="experience.company">/</span>
+          {{ experience.position }}
+        </div>
+      </div>
+      <div class="achievement">
+        <ul>
+          <li
+            v-for="achievement in experience.achievements"
+            :key="achievement.id"
+          >
+            <span>{{ achievement }}</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -42,12 +57,16 @@ export default {
     padding-left: 4rem;
 
     .content {
-      span {
-        display: block;
+      .company, .position {
+        font-weight: bold;
+      }
+    }
 
-        &:first-child {
-          margin-bottom: 8px;
-        }
+    .achievement {
+      margin-top: 16px;
+
+      ul {
+        padding-inline: 20px;
       }
     }
 

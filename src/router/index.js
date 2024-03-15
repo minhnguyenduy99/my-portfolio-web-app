@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Skills from "../views/Skills.vue";
 import Projects from "../views/Projects.vue";
+import Experiences from "../views/Experiences.vue";
 
 const routes = [
   {
     path: "/",
     redirect: { name: "About" },
+  },
+  {
+    path: "/experiences",
+    name: "Experiences",
+    component: Experiences,
   },
   {
     path: "/skills",

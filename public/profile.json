@@ -1,0 +1,141 @@
+{
+  "aboutMe": "I am a NodeJS Backend Developer with 2+ years of experience in designing and building backend services using microservice architecture. My strongest advantage and also my passion is the knowledge and understanding of variety aspects of software development including design principles, architectural patterns, testing, and software methodology.  I still have a lot of rooms for improvement and I will take any opportunities to leverage myself and contribute my best to the products",
+  "profile": {
+    "avatar": "https://res.cloudinary.com/dml8e1w0z/image/upload/v1628519739/Portfolio/image_qgucei.jpg",
+    "fullName": "Nguyen Duy Minh",
+    "introduction": "<span>Hi, I'm a NodeJS backend developer and looking for a new journey of my career</span>",
+    "cvURL": "resume.pdf",
+    "contacts": [
+      {
+        "iconClass": "fab fa-github",
+        "type": "link",
+        "link": "https://github.com/minhnguyenduy99"
+      },
+      {
+        "iconClass": "fab fa-facebook",
+        "type": "link",
+        "link": "https://www.facebook.com/minhnd.mei"
+      },
+      {
+        "iconClass": "fas fa-envelope",
+        "type": "tooltip",
+        "value": "minhnguyenduy99@gmail.com"
+      },
+      {
+        "iconClass": "fas fa-mobile-alt",
+        "type": "tooltip",
+        "value": "0346146128"
+      }
+    ]
+  },
+  "skillInfo": {
+    "skills": [
+      {
+        "groupName": "Frontend",
+        "groupIcon": "fa-solid fa-desktop",
+        "skills": [
+          "VueJS, Buefy, Bootstrap"
+        ]
+      },
+      {
+        "groupName": "Backend",
+        "groupIcon": "fa-solid fa-server",
+        "skills": [
+          "Backend Framework: NodeJS / NestJS",
+          "Database Managment: MongoDB, MySQL",
+          "AWS: API Gateway, Lambda, DynamoDB, S3, SQS, Eventbridge, Step Functions, etc",
+          "Load testing: k6",
+          "System debugging and monitoring: Grafana, Rancher, Dynatrace",
+          "API Testing and Documentation: Swagger, Postman",
+          "PaaS: Railway",
+          "BaaS: Supabase"
+        ]
+      },
+      {
+        "groupName": "Testing",
+        "groupIcon": "fa-solid fa-vial",
+        "skills": [
+          "Testing tool: Jest",
+          "Understand principles of Unit Test and Integration Test"
+        ]
+      },
+      {
+        "groupName": "Devops",
+        "groupIcon": "fa-solid fa-cogs",
+        "skills": [
+          "Containerization: Docker",
+          "CI/CD: Github Actions",
+          "Cloud resource management: Terraform"
+        ]
+      },
+      {
+        "groupName": "Design Patterns and Methodologies",
+        "groupIcon": "fa-solid fa-brain",
+        "skills": [
+          "Design principles and architectural patterns",
+          "Understanding of essential data structures and algorithms"
+        ]
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "from": "June 2020",
+      "to": "September 2020",
+      "company": "TechX",
+      "position": "Intern Backend Developer",
+      "achievements": [
+        "Build app using Lambda, API Gateway and DynamoDB"
+      ]
+    },
+    {
+      "from": "September 2021",
+      "to": "April 2024",
+      "company": "Gameloft",
+      "position": "Backend Developer",
+      "achievements": [
+        "Build backend service APIs for gaming apps on native cloud with k8s and AWS.",
+        "Take part in analyzing and designing many core services.",
+        "Responsible for writing integration tests and E2E tests for the backend system.",
+        "Perform load tests for backend services using k6.",
+        "Monitor and debugging system with multiple tools like Grafana, Rancher, Dynatrace, etc.",
+        "Responsible for code review and release process of the product.",
+        "Actively contribute ideas and improvements for team management and working process"
+      ]
+    },
+    {
+      "from": "October 2023",
+      "to": "Current",
+      "position": "Freelance Backend Developer",
+      "achievements": [
+        "Build E-commerce system using NestJS, MongoDB and Supabase. The app is deployed using Railway."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "ACOMAP (WIP)",
+      "description": "A web app which allows you to look up to accommodations or dormitories directly on a map.",
+      "projectType": "Web App",
+      "technologies": ["VueJS", "NestJS", "AWS Serverless"],
+      "githubLink": "https://github.com/acomap-project",
+      "productLink": "#"
+    },
+    {
+      "title": "Dictensionary",
+      "description": "Looks up words on dictionary, saves your word with context and highlights it on every page you visit",
+      "projectType": "Chrome extension",
+      "technologies": ["VueJS"],
+      "githubLink": "https://github.com/minhnguyenduy99/dictensionary",
+      "productLink": "#"
+    },
+    {
+      "title": "OOPForLearnee",
+      "description": "A website for OOP learners with topic-based organized lessons and practical test quizzes, which enhances user’s experiences and comprehensiveness. <p>Website also comes up with a rich content management system allowing authorized users to create and manage pertaining items and categories.</p>",
+      "projectType": "Web App",
+      "technologies": ["NestJS", "VueJS"],
+      "githubLink": "https://github.com/minhnguyenduy99/OOPForLearnee",
+      "productLink": "https://oop-learnee.herokuapp.com/"
+    }
+  ]
+}

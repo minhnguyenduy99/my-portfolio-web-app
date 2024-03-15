@@ -39,6 +39,7 @@ export default {
   data: () => ({
     navigators: [
       { name: "About Me", to: "/aboutme", type: "router-link" },
+      { name: "Experiences", to: "/experiences", type: "router-link" },
       { name: "Skills", to: "/skills", type: "router-link" },
       { name: "Projects", to: "/projects", type: "router-link" },
     ],

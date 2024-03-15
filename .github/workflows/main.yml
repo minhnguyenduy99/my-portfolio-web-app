@@ -1,14 +1,53 @@
-name: Build Vue
-on: [push]
+# create github actions to deploy vue app to amazon S3
+name: Deployment
+
+on:
+  push:
+    branches:
+      - develop
+      - staging
+      - main
+
 jobs:
-  build_vue:
+  deploy:
     runs-on: ubuntu-latest
-    name: Build Vue
     steps:
-    - uses: actions/checkout@v2
-    - id: Build-Vue
-      uses: xRealNeon/VuePagesAction@1.0.1
-      with:
-        username: 'minhnguyenduy99'
-        reponame: 'my-portfolio-web-app'
-        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+      - name: Map branch to environment
+        id: map_branch_to_env
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/develop" ]; then
+            echo "::set-output name=env_name::development"
+          elif [ "${{ github.ref }}" = "refs/heads/staging" ]; then
+            echo "::set-output name=env_name::staging"
+          elif [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "::set-output name=env_name::production"
+          else
+            echo "::set-output name=env_name::unknown"
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.16.0"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: |
+          cat env/${{ steps.map_branch_to_env.outputs.env_name }}.env >> .env
+          npm run build
+
+      - name: Deploy
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          SOURCE_DIR: "dist"

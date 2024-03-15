@@ -42,6 +42,7 @@ export default {
       { name: "Experiences", to: "/experiences", type: "router-link" },
       { name: "Skills", to: "/skills", type: "router-link" },
       { name: "Projects", to: "/projects", type: "router-link" },
+      { name: "Certificates", to: "/certificates", type: "router-link" },
     ],
     active: 0,
     profileInfo: null,

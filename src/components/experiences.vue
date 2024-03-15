@@ -5,7 +5,7 @@
       v-for="experience in experiences"
       :key="experience.id"
     >
-      <span class="line" />
+      <span class="line"></span>
       <div class="content">
         <div class="is-caption">
           {{ experience.from }} - {{ experience.to }}

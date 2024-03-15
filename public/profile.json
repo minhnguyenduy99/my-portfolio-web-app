@@ -137,5 +137,25 @@
       "githubLink": "https://github.com/minhnguyenduy99/OOPForLearnee",
       "productLink": "https://oop-learnee.herokuapp.com/"
     }
+  ],
+  "certificates": [
+    {
+      "groupName": "Coding",
+      "type": "image",
+      "items": [
+        {
+          "image": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Developer-Associate_badge.5c083fa855fe82c1cf2d0c8b883c265ec72a17c0.png"
+        }
+      ]
+    },
+    {
+      "groupName": "Languages",
+      "type": "text",
+      "items": [
+        {
+          "text": "TOEIC Reading - Listening: <strong>970/990</strong>"
+        }
+      ]
+    }
   ]
 }

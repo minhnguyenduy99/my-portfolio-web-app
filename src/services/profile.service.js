@@ -38,4 +38,8 @@ export default {
   getProfile() {
     return this.data?.profile;
   },
+
+  getCertificates() {
+    return this.data.certificates;
+  },
 };

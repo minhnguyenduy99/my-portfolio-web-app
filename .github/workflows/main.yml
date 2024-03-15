@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - develop
-      - staging
-      - main
 
 jobs:
   deploy:

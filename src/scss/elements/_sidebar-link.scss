@@ -14,13 +14,13 @@ ul.navigation {
       font-size: 1.25rem;
     }
 
-    @include desktop-fullhd {
-      font-size: 2rem;
+    // @include desktop-fullhd {
+    //   font-size: 2rem;
 
-      &:not(:last-child), &:not(.is-active) {
-        margin-bottom: 32px;
-      }
-    }
+    //   &:not(:last-child), &:not(.is-active) {
+    //     margin-bottom: 32px;
+    //   }
+    // }
   }
 
   > .navigation-item {
